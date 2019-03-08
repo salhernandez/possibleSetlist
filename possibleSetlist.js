@@ -130,9 +130,9 @@ sortable.sort(function(a, b) {
   return sortable;
 }
 
-async function main() {
+async function main(name) {
   // wait for all venue links
-  let venues = await getVenues("muse")
+  let venues = await getVenues(name)
   
   // add all songs promises based on links
   let songsPomises = []
@@ -145,11 +145,12 @@ async function main() {
   let allSongsArray = await Promise.all(songsPomises);
   const songCounts = countSongs(allSongsArray)
   const generateRatios = getRatio(songCounts, venues.length);
-
-  console.log(`Total Venues: ${venues.length}`);
+  console.log(`========================================`);
+  console.log(`Results for:${name}`)
+  console.log(`Total Venues: ${venues.length}\n`);
   generateRatios.map((songs) => {
     console.log(`${songs[0]}: ${songs[1] * 100}%`)
   })
 }
 
-main();
+main("muse");
