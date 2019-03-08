@@ -6,9 +6,10 @@ request('https://www.setlist.fm/setlist/muse/2019/pechanga-arena-san-diego-ca-53
         if (!err){
           const $ = cheerio.load(html);
 
-          //get setlist items
-          $('ol').find('li').map(function(i, el) {
-            console.log({el})
+          //get setlist songs
+          $('ol').find('li').find("div").find("a").map(function(i, el) {
+            // const x = el.children().first()
+            console.log(el.children[0].data)
           })
       }
 });
