@@ -110,7 +110,9 @@ async function main(name) {
   console.log(`Results for:${name}`)
   console.log(`Total Venues: ${venues.length}\n`);
   generateRatios.map((songs) => {
-    console.log(`${songs[0]}: ${songs[1] * 100}%`)
+    if(songs[1] * 100 > 10){
+      console.log(`${songs[0]}: ${songs[1] * 100}%`) 
+    }
   })
 }
 
