@@ -107,7 +107,7 @@ async function main(name) {
   const songCounts = countSongs(allSongsArray)
   const generateRatios = getRatio(songCounts, venues.length);
   console.log(`========================================`);
-  console.log(`Results for:${name}`)
+  console.log(`Results for: ${name}`)
   console.log(`Total Venues: ${venues.length}\n`);
   generateRatios.map((songs) => {
     if(songs[1] * 100 > 10){
