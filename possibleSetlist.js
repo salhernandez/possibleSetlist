@@ -11,8 +11,8 @@ const getVenues = (artist) => {
               const $ = cheerio.load(html);
 
                 //get setlist songs
-                $('h2').find('a').map(function(i, el) {
-
+                $('h2 a').map(function(i, el) {
+                  console.log({el})
                   let venueName = el.children[0].data
 
                   venues.push({
@@ -40,7 +40,7 @@ const getSongs = (venueURL) => {
           const $ = cheerio.load(html);
 
           //get setlist songs
-          $('ol').find('li').find("div").find("a").map(function(i, el) {
+          $('ol li div a').map(function(i, el) {
             // const x = el.children().first()
             // console.log(el.children[0].data)
             songNames.push(el.children[0].data)
