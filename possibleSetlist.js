@@ -12,7 +12,6 @@ const getVenues = (artist) => {
 
                 //get setlist songs
                 $('h2 a').map(function(i, el) {
-                  console.log({el})
                   let venueName = el.children[0].data
 
                   venues.push({
