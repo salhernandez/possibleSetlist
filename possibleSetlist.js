@@ -1,5 +1,10 @@
 const cheerio = require('cheerio');
 const axios = require('axios')
+const program = require('commander');
+program
+  .option('-a, --artist <type>', 'artist to query')
+
+program.parse(process.argv);
 
 const getVenues = (artist) => {
   return new Promise((resolve, reject) => {
@@ -115,4 +120,14 @@ async function main(name) {
   })
 }
 
-main("muse");
+if (program.artist){
+  const a = process.argv.indexOf("-a")
+  const b = process.argv.indexOf("-artist")
+  if ( a || b ) {
+    const flagIndex = a ? a : b;
+    const fullArtistName = process.argv.slice(flagIndex+1).join(" ");
+    main(fullArtistName);
+  }
+}else{
+  console.log("please use -a or --artist folowed by artist name")
+}
