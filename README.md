@@ -38,6 +38,5 @@ Woman: 20%
 ```
 
 ## What I Learned
----
 * How to use commander.js to pass in flags to node.js scripts
 * How to use cheerio to scrape websites
