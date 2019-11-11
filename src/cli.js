@@ -120,14 +120,16 @@ async function main(name) {
   })
 }
 
-if (program.artist){
-  const a = process.argv.indexOf("-a")
-  const b = process.argv.indexOf("-artist")
-  if ( a || b ) {
-    const flagIndex = a ? a : b;
-    const fullArtistName = process.argv.slice(flagIndex+1).join(" ");
-    main(fullArtistName);
-  }
-}else{
-  console.log("please use -a or --artist folowed by artist name")
+export function getPossibleSetlist() {
+    if (program.artist){
+        const a = process.argv.indexOf("-a")
+        const b = process.argv.indexOf("-artist")
+        if ( a || b ) {
+          const flagIndex = a ? a : b;
+          const fullArtistName = process.argv.slice(flagIndex+1).join(" ");
+          main(fullArtistName);
+        }
+      }else{
+        console.log("please use -a or --artist folowed by artist name")
+      }
 }

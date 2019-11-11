@@ -1,16 +1,31 @@
 {
   "name": "possiblesetlist",
-  "version": "1.0.0",
-  "description": "",
-  "main": "possibleSetlist.js",
+  "version": "1.1.0",
+  "description": "A CLI to get the possible setlist for an artist",
+  "main": "src/index.js",
+  "bin": {
+    "@salhernandez/possibleSetlist": "bin/possibleSetlist",
+    "possibleSetlist": "bin/possibleSetlist"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "cli",
+    "possibleSetlist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/salhernandez/possibleSetlist.git"
   },
-  "author": "",
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "author": "Sal Hernandez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/salhernandez/possibleSetlist/issues"
@@ -19,6 +34,7 @@
   "dependencies": {
     "axios": "^0.18.1",
     "cheerio": "^1.0.0-rc.2",
-    "commander": "^2.20.0"
+    "commander": "^2.20.0",
+    "esm": "^3.2.25"
   }
 }
