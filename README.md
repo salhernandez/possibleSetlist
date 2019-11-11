@@ -1,13 +1,14 @@
 # possibleSetlist
 
-Setup
-1. run `npm i`
-2. run `node possibleSetlist.js -a <artist>`
-3. champagne
+## Installation
+`npm i -g possiblesetlist`
+
+## Usage
+`possibleSetlist -a <artist>`
 
 Sample Use
 ```
-λ node possibleSetlist.js -a mumford and sons
+λ possibleSetlist -a mumford and sons
 ========================================     
 Results for: mumford and sons                
 Total Venues: 10                             
