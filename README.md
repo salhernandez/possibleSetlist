@@ -4,7 +4,7 @@
 `npm i -g possiblesetlist`
 
 ## Usage
-`possibleSetlist -a <artist>`
+`possiblesetlist -a <artist>`
 
 Sample Use
 ```
