@@ -8,7 +8,7 @@
 
 Sample Use
 ```
-λ possibleSetlist -a mumford and sons
+λ possiblesetlist -a mumford and sons
 ========================================     
 Results for: mumford and sons                
 Total Venues: 10                             
