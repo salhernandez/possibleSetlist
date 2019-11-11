@@ -1,7 +1,7 @@
 # possibleSetlist
 
 ## Installation
-1. `npm i -g possiblesetlist`
+`npm i -g possiblesetlist`
 
 ## Usage
 `possibleSetlist -a <artist>`
